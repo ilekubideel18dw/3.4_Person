@@ -122,9 +122,13 @@ public class Person {
 	
 	public String dniByDefault() {
 		
-		this.dni = "00000000A";
-		
-		return this.dni;
+		if (dni.matches("")) {
+			
+			this.dni = "00000000A";
+			
+			return this.dni;	
+			
+		}
 		
 	}
 	
