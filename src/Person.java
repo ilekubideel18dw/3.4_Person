@@ -86,8 +86,8 @@ public class Person {
 	}
 	
 	/**
-	 * 
-	 * 
+	 * If the weight of the person is between 50 and 90
+	 * is an ideal weight, if it's not, it's not ideal.
 	 */
 	
 	public String idealWeight() {
@@ -107,8 +107,7 @@ public class Person {
 	}
 	
 	/**
-	 * 
-	 * 
+	 * toString is going to return all the information of a person.
 	 */
 	
 	public String toString() {
@@ -118,8 +117,20 @@ public class Person {
 	}
 	
 	/**
-	 * 
-	 * 
+	 * If the person don't have saved its DNI, its DNI is going to be a default one.
+	 */
+	
+	public String dniByDefault() {
+		
+		this.dni = "00000000A";
+		
+		return this.dni;
+		
+	}
+	
+	/**
+	 * If the age of the person is more than 17
+	 * is an adult, if it's not, it's not adult.
 	 */
 	
 	public String isAdult() {
