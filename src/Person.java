@@ -126,7 +126,7 @@ public class Person {
 		
 		if (dni.matches("")) {
 			
-			String alphabet = "ABCDEFGHIJKLMNÑOPQRSTUVWXYZ";
+			String abc = "ABCDEFGHIJKLMNÑOPQRSTUVWXYZ";
 			
 			Random aleatorio = new Random();
 			
@@ -134,7 +134,7 @@ public class Person {
 			
 			int max = 99999999;
 			
-			this.dni = Integer.toString((int)Math.random() * ((max - min) + 1)) + alphabet.charAt(aleatorio.nextInt(alphabet.length()-1));
+			this.dni = Integer.toString((int)Math.random() * ((max - min) + 1)) + abc.charAt(aleatorio.nextInt(abc.length()-1));
 			
 		}
 		

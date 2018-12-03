@@ -5,23 +5,69 @@ public class Agenda {
 	
 	public static void main(String[] args) {
 		
-		ArrayList<Person> person = new ArrayList<Person>();
-		ArrayList<String> telephone = new ArrayList<String>();
-		ArrayList<String> address = new ArrayList<String>();
+		ArrayList<Person> people = new ArrayList<Person>();
+		ArrayList<String> telephones = new ArrayList<String>();
+		ArrayList<String> addresses = new ArrayList<String>();
 		
-		public String getData() {
+		Scanner sc = new Scanner(System.in);
+		
+		public String viewData() {
 			
-			int index = 0;
 			
-			for (int x = 0; x < person.size(); x++) {
+			
+		}
+		
+		public String addData() {
+			
+			
+			
+		}
+		
+		public String deleteData() {
+			
+			
+			
+		}
+		
+		public String modifyData() {
+			
+			int loop = 0;
+			
+			while (loop != 1) {
 				
+				int option = sc.nextInt()
 				
+				switch (option) {
+				
+					case 1:
+						break;
+						
+					case 2:	
+						break;
+						
+					case 3:	
+						break;
+						
+					case 4:
+						break;
+						
+					case 5:	
+						break;
+						
+					case 6:
+						break;
+						
+					case 7:
+						break;
+						
+					default:
+						break;
+				
+				}
 				
 			}
 			
-			return person.get(index).toString() + ", Telephone: " + telephone.get(index) + " Adress: " + address.get(index);
-			
-	    }
+		}
 		
 	}
 	
