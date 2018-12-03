@@ -120,13 +120,11 @@ public class Person {
 	 * If the person don't have saved its DNI, its DNI is going to be a default one.
 	 */
 	
-	public String dniByDefault() {
+	public void dniByDefault() {
 		
 		if (dni.matches("")) {
 			
-			this.dni = "00000000A";
-			
-			return this.dni;	
+			this.dni = "00000000A";	
 			
 		}
 		
