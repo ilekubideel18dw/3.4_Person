@@ -1,9 +1,11 @@
+import java.util.Random;
+
 public class Person {
 	
-	private String name;
-	private int age;
-	private int weight;
-	private String dni;
+	private String name = "";
+	private int age = 0;
+	private int weight = 0;
+	private String dni = "";
 	
 	public Person (String name, String dni){
 		
@@ -86,28 +88,28 @@ public class Person {
 	}
 	
 	/**
-	 * If the weight of the person is between 50 and 90
-	 * is an ideal weight, if it's not, it's not ideal.
+	 * @ If the weight of the person is between 50 and 90
+	 * @ is an ideal weight, if it's not, it's not ideal.
 	 */
 	
-	public String idealWeight() {
+	public Boolean idealWeight() {
 		
 		if (weight > 50 && weight < 90) {
 			
-			return "Ideal weight!";
+			return true;
 			
 		}
 		
 		else {
 			
-			return "Not ideal weight!";
+			return false;
 			
 		}
 		
 	}
 	
 	/**
-	 * toString is going to return all the information of a person.
+	 * @ toString is going to return all the information of a person.
 	 */
 	
 	public String toString() {
@@ -117,35 +119,43 @@ public class Person {
 	}
 	
 	/**
-	 * If the person don't have saved its DNI, its DNI is going to be a default one.
+	 * @ If the person don't have saved its DNI, its DNI is going to be a default one.
 	 */
 	
 	public void dniByDefault() {
 		
 		if (dni.matches("")) {
 			
-			this.dni = "00000000A";	
+			String alphabet = "ABCDEFGHIJKLMNÑOPQRSTUVWXYZ";
+			
+			Random aleatorio = new Random();
+			
+			int min = 00000000;
+			
+			int max = 99999999;
+			
+			this.dni = Integer.toString((int)Math.random() * ((max - min) + 1)) + alphabet.charAt(aleatorio.nextInt(alphabet.length()-1));
 			
 		}
 		
 	}
 	
 	/**
-	 * If the age of the person is more than 17
-	 * is an adult, if it's not, it's not adult.
+	 * @ If the age of the person is more than 17
+	 * @ is an adult, if it's not, it's not adult.
 	 */
 	
-	public String isAdult() {
+	public Boolean isAdult() {
 		
 		if (age > 17) {
 			
-			return "Adult!";
+			return true;
 			
 		}
 		
 		else {
 			
-			return "Not adult!";
+			return false;
 			
 		}
 		
