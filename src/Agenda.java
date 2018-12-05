@@ -2,91 +2,79 @@ import java.util.Scanner;
 import java.util.ArrayList;
 
 public class Agenda {
-	
-	public static void main(String[] args) {
 		
-		ArrayList<Person> people = new ArrayList<Person>();
-		ArrayList<String> telephones = new ArrayList<String>();
-		ArrayList<String> adresses = new ArrayList<String>();
+	ArrayList<Person> people = new ArrayList<Person>();
+	ArrayList<String> telephones = new ArrayList<String>();
+	ArrayList<String> adresses = new ArrayList<String>();
 		
-		Scanner sc = new Scanner(System.in);
+	Scanner sc = new Scanner(System.in);
 		
-		int index = 0;
+	int index = 0;
 		
-		public int theIndex(String name) {
+	private int theIndex(String name) {
 			
-			for (int x = 0; x < people.size(); x++) {
+		for (int x = 0; x < people.size(); x++) {
 				
-				if (people.get(i).getName().matches(name)) {
+			if (people.get(x).getName().matches(name)) {
 					
-					index = x;
-					
-					break;
+				index = x;
 				
-				}
-			
 			}
+			
+		}
 
-			return index;
-		}
+		return index;
 		
-		public void addData(Person human, String telephone, String adress) {
-			
-			people.add(human);
-			telephones.add(telephone);
-			adresses.add(adress);
-			
-		}
+	}
 		
-		public String viewData(String name) {
+	public void addData(Person human, String telephone, String adress) {
 			
-			return people.get(theIndex(name)).toString() + " Phone number: " + telephones.get(theIndex(name)) + " Adress: " + adresses.get(theIndex(name));
+		people.add(human);
+		telephones.add(telephone);
+		adresses.add(adress);
 			
-		}
+	}
 		
-		public String deleteData(String name) {
+	public String viewData(String name) {
 			
-			people.remove(theIndex(name));
-			telephones.remove(theIndex(name));
-			adresses.remove(theIndex(name));
-			
-		}
+		return people.get(theIndex(name)).toString() + " Phone number: " + telephones.get(theIndex(name)) + " Adress: " + adresses.get(theIndex(name));
 		
-		public String modifyData() {
+	}
+		
+	public void deleteData(String name) {
 			
-			int loop = 0;
+		people.remove(theIndex(name));
+		telephones.remove(theIndex(name));
+		adresses.remove(theIndex(name));
 			
-			while (loop != 1) {
+	}
+		
+	public void modifyData(String name, String option, String modification) {
+			
+		switch (option) {
 				
-				int option = sc.nextInt()
-				
-				switch (option) {
-				
-					case 1:
-						break;
+			case "name":
+				people.get(theIndex(name)).setName(modification);
+				break;
 						
-					case 2:	
-						break;
+			case "age":	
+				people.get(theIndex(name)).setAge(Integer.parseInt(modification));
+				break;
 						
-					case 3:	
-						break;
+			case "weight":	
+				people.get(theIndex(name)).setWeight(Integer.parseInt(modification));
+				break;
 						
-					case 4:
-						break;
+			case "dni":
+				people.get(theIndex(name)).setDNI(modification);
+				break;
 						
-					case 5:	
-						break;
+			case "telephone":	
+				break;
 						
-					case 6:
-						break;
-						
-					case 7:
-						break;
-						
-					default:
-						break;
-				
-				}
+			case "adress":
+				break;
+
 				
 			}
 			
