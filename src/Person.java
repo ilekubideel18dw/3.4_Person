@@ -128,13 +128,13 @@ public class Person {
 			
 			String abc = "ABCDEFGHIJKLMNÑOPQRSTUVWXYZ";
 			
-			Random aleatorio = new Random();
+			Random surprise = new Random();
 			
 			int min = 00000000;
 			
 			int max = 99999999;
 			
-			this.dni = Integer.toString((int)Math.random() * ((max - min) + 1)) + abc.charAt(aleatorio.nextInt(abc.length()-1));
+			this.dni = Integer.toString((int)Math.random() * ((max - min) + 1)) + abc.charAt(surprise.nextInt(abc.length()-1));
 			
 		}
 		
