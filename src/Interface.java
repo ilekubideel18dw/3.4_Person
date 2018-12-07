@@ -24,9 +24,11 @@ public class Interface {
 			
 			switch (option) { 
 			
-			case 0: // Exit
+			case 0: // Exit.
 				
 				loop = 1;
+				
+				break;
 			
 			case 1: // View data.
 				
