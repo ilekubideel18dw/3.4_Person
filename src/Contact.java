@@ -30,7 +30,7 @@ public class Contact {
 		
 	}
 	
-	public void setPhone() {
+	public void setPhone(int phone) {
 		
 		this.phone = phone;
 		
@@ -42,9 +42,15 @@ public class Contact {
 		
 	}
 	
-	public void setAddress() {
+	public void setAddress(String address) {
 		
 		this.address = address;
+		
+	}
+	
+	public String toString2() {
+		
+		return ", Phone: " + phone + ", Address: " + address + ".";
 		
 	}
 	

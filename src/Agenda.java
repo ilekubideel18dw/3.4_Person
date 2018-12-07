@@ -1,26 +1,21 @@
-import java.util.Scanner;
 import java.util.ArrayList;
 
 public class Agenda {
 		
-	ArrayList<Person> people = new ArrayList<Person>();
-	ArrayList<String> phones = new ArrayList<String>();
-	ArrayList<String> adresses = new ArrayList<String>();
-		
-	Scanner sc = new Scanner(System.in);
+	ArrayList<Contact> contacts = new ArrayList<Contact>();
 	
 	/**
-	 * @ An index to link a person with a phone and an adress 
+	 * @ An index to link a person with a phone and an address 
 	 * @ with the position.
 	 */
 	
 	int index = 0;
 		
-	private int theIndex(String name) {
+	private int Index(String data) {
 			
-		for (int x = 0; x < people.size(); x++) {
+		for (int x = 0; x < contacts.size(); x++) {
 				
-			if (people.get(x).getName().matches(name)) {
+			if (contacts.get(x).getPerson().getName().matches(data)) {
 					
 				index = x;
 				
@@ -36,9 +31,9 @@ public class Agenda {
 	 * @ A method to view the information of one contact.
 	 */
 		
-	public String viewData(String name) {
+	public String viewData(String data) {
 			
-		return people.get(theIndex(name)).toString() + " Phone number: " + phones.get(theIndex(name)) + " Adress: " + adresses.get(theIndex(name));
+		return contacts.get(Index(data)).toString() + contacts.get(Index(data)).toString2();
 		
 	}
 	
@@ -46,11 +41,9 @@ public class Agenda {
 	 * @ A method to add new contact.
 	 */
 		
-	public void addData(Person human, String phone, String adress) {
+	public void addData(Contact data) {
 			
-		people.add(human);
-		phones.add(phone);
-		adresses.add(adress);
+		contacts.add(data);
 			
 	}
 	
@@ -58,11 +51,9 @@ public class Agenda {
 	 * @ A method to delete a contact.
 	 */
 		
-	public void deleteData(String name) {
+	public void deleteData(String data) {
 			
-		people.remove(theIndex(name));
-		phones.remove(theIndex(name));
-		adresses.remove(theIndex(name));
+		contacts.remove(Index(data));
 			
 	}
 	
@@ -70,34 +61,32 @@ public class Agenda {
 	 * @ A method to modify the information about a contact.
 	 */
 		
-	public void modifyData(String name, String modification) {
+	public void modifyData(String data, String option, String modification) {
 			
-		switch (sc.next()) {
+		switch (option) {
 				
 			case "name":
-				people.get(theIndex(name)).setName(modification);
+				contacts.get(Index(data)).getPerson().setName(modification);
 				break;
 						
 			case "age":	
-				people.get(theIndex(name)).setAge(Integer.parseInt(modification));
+				contacts.get(Index(data)).getPerson().setAge(Integer.parseInt(modification));
 				break;
 						
 			case "weight":	
-				people.get(theIndex(name)).setWeight(Integer.parseInt(modification));
+				contacts.get(Index(data)).getPerson().setWeight(Integer.parseInt(modification));
 				break;
 						
 			case "dni":
-				people.get(theIndex(name)).setDNI(modification);
+				contacts.get(Index(data)).getPerson().setDNI(modification);
 				break;
 						
 			case "phone":
-				phones.remove(theIndex(name));
-				phones.add(modification);
+				contacts.get(Index(data)).setPhone(Integer.parseInt(modification));
 				break;
 						
 			case "adress":
-				adresses.remove(theIndex(name));
-				adresses.add(modification);
+				contacts.get(Index(data)).setAddress(modification);
 				break;
 				
 		}

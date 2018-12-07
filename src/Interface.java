@@ -25,7 +25,7 @@ public class Interface {
 			
 			case 1:
 				
-				// Another option.
+				// Another option?
 				System.out.println("Do you want to finish or do you want another option? Enter 0 to finish or another number to continue:");
         		int continue1 = sc.nextInt();
         		if (continue1 < 1) {
@@ -35,7 +35,29 @@ public class Interface {
 				
 			case 2:
 				
-				// Another option.
+				System.out.println("Name:");
+				String name = sc.next();
+				
+				System.out.println("Age:");
+				int age = sc.nextInt();
+				
+				System.out.println("Weight:");
+				int weight = sc.nextInt();
+				
+				System.out.println("DNI:");
+				String dni = sc.next();
+				
+				System.out.println("Phone:");
+				int phone = sc.nextInt();
+				
+				System.out.println("Address:");
+				String address = sc.next();
+				
+				Person human = new Person(name, age, weight, dni);
+				
+				Contact contacto = new Contact(human, phone, address);
+				
+				// Another option?
 				System.out.println("Do you want to finish or do you want another option? Enter 0 to finish or another number to continue:");
         		int continue2 = sc.nextInt();
         		if (continue2 < 1) {
@@ -45,7 +67,7 @@ public class Interface {
 				
 			case 3:
 				
-				// Another option.
+				// Another option?
 				System.out.println("Do you want to finish or do you want another option? Enter 0 to finish or another number to continue:");
         		int continue3 = sc.nextInt();
         		if (continue3 < 1) {
@@ -55,7 +77,7 @@ public class Interface {
 				
 			case 4:
 				
-				// Another option.
+				// Another option?
 				System.out.println("Do you want to finish or do you want another option? Enter 0 to finish or another number to continue:");
         		int continue4 = sc.nextInt();
         		if (continue4 < 1) {
