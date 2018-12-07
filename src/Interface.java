@@ -18,12 +18,17 @@ public class Interface {
 			System.out.println("2.- Add a new contact.");
 			System.out.println("3.- Delete a contact.");
 			System.out.println("4.- Modify a contact.");
+			System.out.println("0.- Exit.");
 			
 			int option = sc.nextInt();
 			
-			switch (option) {
+			switch (option) { 
 			
-			case 1:
+			case 0: // Exit
+				
+				loop = 1;
+			
+			case 1: // View data.
 				
 				// Another option?
 				System.out.println("Do you want to finish or do you want another option? Enter 0 to finish or another number to continue:");
@@ -33,7 +38,7 @@ public class Interface {
         		}
 				break;
 				
-			case 2:
+			case 2: // Add new data.
 				
 				System.out.println("Name:");
 				String name = sc.next();
@@ -65,7 +70,7 @@ public class Interface {
         		}
 				break;
 				
-			case 3:
+			case 3: // Delete data.
 				
 				// Another option?
 				System.out.println("Do you want to finish or do you want another option? Enter 0 to finish or another number to continue:");
@@ -75,7 +80,7 @@ public class Interface {
         		}
 				break;
 				
-			case 4:
+			case 4: // Modify data.
 				
 				// Another option?
 				System.out.println("Do you want to finish or do you want another option? Enter 0 to finish or another number to continue:");
@@ -85,9 +90,16 @@ public class Interface {
         		}
 				break;
 			
+			default:
+				
+				System.out.println("You don't enter a valid option, please try again.");
+				break;
+				
 			}
 			
 		}
+		
+		System.out.println("Thank you! Bye!");
 		
 	}
 	

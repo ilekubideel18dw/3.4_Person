@@ -33,7 +33,7 @@ public class Agenda {
 		
 	public String viewData(String data) {
 			
-		return contacts.get(Index(data)).toString() + contacts.get(Index(data)).toString2();
+		return contacts.get(Index(data)).getPerson().toString() + contacts.get(Index(data)).toString2();
 		
 	}
 	
