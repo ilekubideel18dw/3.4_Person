@@ -48,6 +48,11 @@ public class Contact {
 		
 	}
 	
+	/** @author Iosu A method to see data
+	 * 
+	 * @return info
+	 */
+	
 	public String toString2() {
 		
 		return ", Phone: " + phone + ", Address: " + address + ".";

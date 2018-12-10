@@ -4,9 +4,10 @@ public class Agenda {
 		
 	ArrayList<Contact> contacts = new ArrayList<Contact>();
 	
-	/**
-	 * @ An index to link a person with a phone and an address 
-	 * @ with the position.
+	/** @author Iosu An index to link a person with a phone and an address with the position.
+	 * 
+	 * @param data
+	 * @return An index
 	 */
 	
 	int index = 0;
@@ -27,6 +28,12 @@ public class Agenda {
 		
 	}
 	
+	/** @author Iosu A method to take the information in the index
+	 * 
+	 * @param index
+	 * @return contact from the index
+	 */
+	
 	public Contact takeContact(int index) {
 		
 		 
@@ -34,14 +41,22 @@ public class Agenda {
 
 	}
 	
-	public int find(String name) {
+	/** @author Iosu A method to find a contact with an index
+	 * 
+	 * @param data
+	 * @return An index
+	 */
+	
+	public int find(String data) {
 		
-		return Index(name);
+		return Index(data);
 			
 	}
 	
-	/**
-	 * @ A method to view the information of one contact.
+	/** @author Iosu A method to view the information of one contact.
+	 * 
+	 *  @param data
+	 *  @return Return the information about a contact
 	 */
 		
 	public String viewData(String data) {
@@ -50,8 +65,9 @@ public class Agenda {
 		
 	}
 	
-	/**
-	 * @ A method to add new contact.
+	/** @author Iosu A method to add new contact.
+	 * 
+	 * @param data
 	 */
 		
 	public void addData(Contact data) {
@@ -60,8 +76,9 @@ public class Agenda {
 			
 	}
 	
-	/**
-	 * @ A method to delete a contact.
+	/** @author Iosu A method to delete a contact.
+	 * 
+	 * @param data
 	 */
 		
 	public void deleteData(String data) {
@@ -70,39 +87,15 @@ public class Agenda {
 			
 	}
 	
-	/**
-	 * @ A method to modify the information about a contact.
+	/** @author Iosu A method to modify the information about a contact.
+	 * 
+	 * @param contact
+	 * @param index
 	 */
 		
-	public void modifyData(String data, String option, String modification) {
-			
-		switch (option) {
-				
-			case "name":
-				contacts.get(Index(data)).getPerson().setName(modification);
-				break;
-						
-			case "age":	
-				contacts.get(Index(data)).getPerson().setAge(Integer.parseInt(modification));
-				break;
-						
-			case "weight":	
-				contacts.get(Index(data)).getPerson().setWeight(Integer.parseInt(modification));
-				break;
-						
-			case "dni":
-				contacts.get(Index(data)).getPerson().setDNI(modification);
-				break;
-						
-			case "phone":
-				contacts.get(Index(data)).setPhone(Integer.parseInt(modification));
-				break;
-						
-			case "adress":
-				contacts.get(Index(data)).setAddress(modification);
-				break;
-				
-		}
+	public void modifyData(Contact contact, int index) {
+		
+		contacts.set(index, contact)
 		
 	}
 	

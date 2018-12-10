@@ -87,9 +87,9 @@ public class Person {
 		
 	}
 	
-	/**
-	 * @ If the weight of the person is between 50 and 90
-	 * @ is an ideal weight, if it's not, it's not ideal.
+	/** @author Iosu If the weight of the person is between 50 and 90 is an ideal weight, if it's not, it's not ideal.
+	 * 
+	 * @return boolean
 	 */
 	
 	public Boolean idealWeight() {
@@ -108,8 +108,9 @@ public class Person {
 		
 	}
 	
-	/**
-	 * @ toString is going to return all the information of a person.
+	/** @author Iosu toString is going to return all the information of a person.
+	 * 
+	 * @return info 
 	 */
 	
 	public String toString() {
@@ -118,8 +119,9 @@ public class Person {
 		
 	}
 	
-	/**
-	 * @ If the person don't have saved its DNI, its DNI is going to be a default one.
+	/** @author Iosu If the person don't have saved its DNI, its DNI is going to be a default one.
+	 * 
+	 *  
 	 */
 	
 	public void dniByDefault() {
@@ -140,9 +142,9 @@ public class Person {
 		
 	}
 	
-	/**
-	 * @ If the age of the person is more than 17
-	 * @ is an adult, if it's not, it's not adult.
+	/** @author Iosu If the age of the person is more than 17 is an adult, if it's not, it's not adult.
+	 * 
+	 * @return boolean 
 	 */
 	
 	public Boolean isAdult() {

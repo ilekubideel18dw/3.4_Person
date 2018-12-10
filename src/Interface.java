@@ -94,8 +94,8 @@ public class Interface {
 			case 4: // Modify data.
 				
 				System.out.println("Enter the name of the contact you want to modify");
-				// String data = sc.next();
-				Contact modifyData = myContacts.takeContact(myContacts.find(sc.next()));
+				String data = sc.next();
+				Contact modifiedData = myContacts.takeContact(myContacts.find(data));
 
 				System.out.println("What do you want to change?");
 				System.out.println("Enter an option:");
@@ -153,6 +153,8 @@ public class Interface {
 						break;
 				
 				}
+				
+				myContacts.modifyData(modifiedData, myContacts.find(data));
 				
 				// Another option?
 				System.out.println("Do you want to finish or do you want another option? Enter 0 to finish or another number to continue:");
