@@ -6,6 +6,8 @@ public class Interface {
 		
 		Scanner sc = new Scanner(System.in);
 		
+		Agenda myContacts = new Agenda();
+		
 		int loop = 0;
 		
 		while (loop != 1) {
@@ -31,6 +33,9 @@ public class Interface {
 				break;
 			
 			case 1: // View data.
+				
+				String view = sc.next();
+				myContacts.viewData(view);
 				
 				// Another option?
 				System.out.println("Do you want to finish or do you want another option? Enter 0 to finish or another number to continue:");
@@ -60,9 +65,10 @@ public class Interface {
 				System.out.println("Address:");
 				String address = sc.next();
 				
-				Person human = new Person(name, age, weight, dni);
+				Person person = new Person(name, age, weight, dni);
+				Contact contact = new Contact(person, phone, address);
 				
-				Contact contacto = new Contact(human, phone, address);
+				myContacts.addData(contact);
 				
 				// Another option?
 				System.out.println("Do you want to finish or do you want another option? Enter 0 to finish or another number to continue:");
@@ -74,6 +80,9 @@ public class Interface {
 				
 			case 3: // Delete data.
 				
+				String delete = sc.next();
+				myContacts.deleteData(delete);
+				
 				// Another option?
 				System.out.println("Do you want to finish or do you want another option? Enter 0 to finish or another number to continue:");
         		int continue3 = sc.nextInt();
@@ -84,6 +93,68 @@ public class Interface {
 				
 			case 4: // Modify data.
 				
+				System.out.println("Enter the name of the contact you want to modify");
+				
+				
+
+				System.out.println("What do you want to change?");
+				System.out.println("Enter an option:");
+				System.out.println("1.- Name");
+				System.out.println("2.- Age");
+				System.out.println("3.- Weight");
+				System.out.println("4.- DNI");
+				System.out.println("5.- Phone");
+				System.out.println("6.- Address");
+				
+				/*
+				int modifyOption = sc.nextInt();
+				
+				switch (modifyOption) {
+				
+					case 1:
+						
+						System.out.println("Enter a new name:");
+						modifyData.getPerson().setName(sc.next());
+						System.out.println("New name: " + modifyData.getPerson().getName() + ".");
+						break;
+						
+					case 2:
+						
+						System.out.println("Enter a new age:");
+						modifyData.getPerson().setAge(sc.nextInt());
+						System.out.println("New age: " + modifyData.getPerson().getAge() + ".");
+						break;
+						
+					case 3:
+						
+						System.out.println("Enter a new weight:");
+						modifyData.getPerson().setWeight(sc.nextInt());
+						System.out.println("New weight: " + modifyData.getPerson().getWeight() + ".");
+						break;
+						
+					case 4:
+						
+						System.out.println("Enter a new DNI:");
+						modifyData.getPerson().setDNI(sc.next());
+						System.out.println("New DNI: " + modifyData.getPerson().getDNI() + ".");
+						break;
+						
+					case 5:
+						
+						System.out.println("Enter a new phone:");
+						modifyData.setPhone(sc.nextInt());
+						System.out.println("New phone: " + modifyData.getPhone() + ".");
+						break;
+						
+					case 6:
+						
+						System.out.println("Enter a new address:");
+						modifyData.setAddress(sc.next());
+						System.out.println("New address: " + modifyData.getAddress() + ".");
+						break;
+				
+				}
+				*/
 				// Another option?
 				System.out.println("Do you want to finish or do you want another option? Enter 0 to finish or another number to continue:");
         		int continue4 = sc.nextInt();
