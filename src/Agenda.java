@@ -27,6 +27,19 @@ public class Agenda {
 		
 	}
 	
+	public Contact takeContact(int index) {
+		
+		 
+		return contacts.get(index);
+
+	}
+	
+	public int find(String name) {
+		
+		return Index(name);
+			
+	}
+	
 	/**
 	 * @ A method to view the information of one contact.
 	 */
